@@ -20,6 +20,4 @@ interface PexelsApi {
         @Query("per_page") perPage: String
     ): PhotoResponseModel
 
-
-
 }
