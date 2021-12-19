@@ -1,4 +1,4 @@
-package info.atiar.GalleryKotlin.model
+package info.atiar.GalleryKotlin.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
