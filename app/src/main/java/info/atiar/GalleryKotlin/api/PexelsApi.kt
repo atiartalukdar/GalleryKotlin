@@ -11,13 +11,13 @@ interface PexelsApi {
         const val API_KEY = BuildConfig.UNSPLASH_ACCESS_KEY
     }
 
-    @Headers("Accept-Version: v1","Authorization: Client-ID $API_KEY" +
-            "")
     @GET("search/photos")
     suspend fun searchPhotos(
         @Query("query") query: String,
         @Query("page") page: Int,
-        @Query("per_page") perPage: Int
+        @Query("per_page") perPage: Int,
+        @Query("client_id") clientId: String = API_KEY
+
     ): PhotoResponseModel
 
 }

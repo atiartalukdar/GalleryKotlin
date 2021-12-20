@@ -8,7 +8,7 @@ data class PhotoModel(
     val id: String,
     val description: String?,
     val urls: PhotoUrls,
-    val authors: Author
+    val user: Author
 ):Parcelable {
     @Parcelize
     data class PhotoUrls(

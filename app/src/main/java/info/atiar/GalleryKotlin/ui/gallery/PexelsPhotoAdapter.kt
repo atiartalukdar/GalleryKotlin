@@ -28,8 +28,6 @@ class PexelsPhotoAdapter : PagingDataAdapter<PhotoModel, PexelsPhotoAdapter.Phot
         if (currentItem != null) {
             holder.bind(currentItem)
         }
-
-
     }
 
 
@@ -42,8 +40,9 @@ class PexelsPhotoAdapter : PagingDataAdapter<PhotoModel, PexelsPhotoAdapter.Phot
                     .centerCrop()
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .error(R.drawable.ic_error)
+                    .into(imageView)
 
-                //textViewUserName.text = photo.authors.username
+                textViewUserName.text = photo.user.username
             }
         }
     }

@@ -13,10 +13,11 @@ class GalleryViewModel @ViewModelInject constructor(
     ) : ViewModel(){
 
     companion object{
-        private const val DEFAULT_QUERY = "Dog"
+        private const val DEFAULT_QUERY = "cat"
     }
 
     private val currentQuery = MutableLiveData(DEFAULT_QUERY)
+
     val photos = currentQuery.switchMap {
         repository.getSearchResult(it).cachedIn(viewModelScope)
     }
