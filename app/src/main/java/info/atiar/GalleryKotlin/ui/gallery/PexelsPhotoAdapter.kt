@@ -16,7 +16,6 @@ class PexelsPhotoAdapter : PagingDataAdapter<PhotoModel, PexelsPhotoAdapter.Phot
     PHOTO_COMPARATOR
 ) {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
         val binding = ItemPhotoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PhotoViewHolder(binding)
